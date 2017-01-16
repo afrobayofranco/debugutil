@@ -1,15 +1,15 @@
 {
-  "name": "link-short",
-  "version": "1.5.4",
-  "description": "URL Shortener",
+  "name": "debug-utility",
+  "version": "1.5.0",
+  "description": "Debug Utility",
   "main": "src/server.js",
   "scripts": {
     "test": "test/__api.js"
   },
   "keywords": [
-    "URL",
-    "Shortener",
-    "API"
+    "Debug",
+    "Utility",
+    "Tool"
   ],
   "author": "Melony Smith",
   "license": "ISC",
