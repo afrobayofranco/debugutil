@@ -1,6 +1,6 @@
 {
   "name": "link-short",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "URL Shortener",
   "main": "src/server.js",
   "scripts": {
