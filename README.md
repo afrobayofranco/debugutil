@@ -1,2 +1,3 @@
-# debugutil
-Debug Utility with Logging by Melony Smith for Full Sail University: Deployment of Web Applications Online
+## debugutil
+
+A debug utility tool with logging created for Deployment of Web Applications class at Full Sail University
