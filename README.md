@@ -1,5 +1,5 @@
 ## debugutil
-A [NodeJS](https://nodejs.org/en/) API debug utility tool with logging developed for my Deployment of Web Applications class at Full Sail University. This package will allow you to debug your API with success and error messages displayed in your CLI (Command Line Interface) as well as saving timestamped messages to a .log file.
+A NodeJS API debug utility tool with logging developed for my Deployment of Web Applications class at Full Sail University. This package will allow you to debug your API with success and error messages displayed in your CLI (Command Line Interface) as well as saving timestamped messages to a .log file.
 
 ## Required
 This Debug Utility Tool will run on an API created with [NodeJS](https://nodejs.org/en/)
