@@ -5,7 +5,7 @@ A [NodeJS](https://nodejs.org/en/) API debug utility tool with logging developed
 This Debug Utility Tool will run on an API created with [NodeJS](https://nodejs.org/en/)
 
 ## Installation
-In your CLI, ensure that you are in the directory containing your [NodeJS](https://nodejs.org/en/) API.
+In your CLI, ensure that you are in the directory containing your NodeJS API.
 
 Run the following to add debugutil to your node_modules and your package.json file dependencies:
 ```javascript
