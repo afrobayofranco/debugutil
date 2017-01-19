@@ -1,12 +1,27 @@
 // Debug Utility Tool with Logging by Melony Smith
 
-/* eslint-env mocha */
 const request = require('supertest');
 const expect = require('chai');
 
 const debug= require('../src/debug.js');
 
-describe('Debug', () => {
-  it('Debug OK', () => {
-  });
-});
+describe ('debugutil', () => {
+  const logArray = [
+    {
+      testName: 'should log error',
+      functionName: debug.debugSuccess,
+      functionType: 'debug.debugSuccess',
+    },
+    {
+      testName: 'should log success',
+      functionName: debug.debugError,
+      functionType: 'debug.debugError',
+    },
+  ]
+    for (let i = 0; i < logArray.length; i++) {
+      it (logArray[i].testName, (done) => {
+          logArray[i].functionName('This is a '+ logArray[i].functionType + ' test')
+     done()
+    })
+  }
+})

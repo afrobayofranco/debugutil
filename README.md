@@ -1,11 +1,11 @@
 ## debugutil
-A NodeJS API debug utility tool with logging developed for my Deployment of Web Applications class at Full Sail University. This package will allow you to debug your API with success and error messages displayed in your CLI (Command Line Interface) as well as saving timestamped messages to a .log file.
+A [NodeJS](https://nodejs.org/en/) API debug utility tool with logging developed for my Deployment of Web Applications class at Full Sail University. This package will allow you to debug your API with success and error messages displayed in your CLI (Command Line Interface) as well as saving timestamped messages to a .log file.
 
 ## Required
 This Debug Utility Tool will run on an API created with [NodeJS](https://nodejs.org/en/)
 
 ## Installation
-In your CLI, ensure that you are in the directory containing your NodeJS API.
+In your CLI, ensure that you are in the directory containing your [NodeJS](https://nodejs.org/en/) API.
 
 Run the following to add debugutil to your node_modules and your package.json file dependencies:
 ```javascript
@@ -38,7 +38,11 @@ DEBUG=false
 ```
 
 ## Unit Testing
-I have also included Unit Testing for this package. Unit Testing is provided using [chai](https://www.npmjs.com/package/chai), [supertest](https://www.npmjs.com/package/supertest) and [mocha](https://www.npmjs.com/package/mocha).
+I have also included Unit Testing for this package. Unit Testing is provided using [chai](https://www.npmjs.com/package/chai), [supertest]https://www.npmjs.com/package/supertest() and [mocha](https://www.npmjs.com/package/mocha).
+To run Unit Test, run the following command in your CLI:
+```javascript
+mocha
+```
 
 ## Code Coverage
 Check out [istanbul](https://www.npmjs.com/package/istanbul) for more on code coverage.
