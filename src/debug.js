@@ -1,27 +1,27 @@
-// UDebug Utility with Logging by Melony Smith
+// Debug Utility with Logging by Melony Smith
 
 // dependencies
-const chalk = require('cli-color');
+const timestamp = require('log-timestamp');
+const chalk = require('chalk');
 const fs = require('fs');
-const stamp = require('log-timestamp');
 
 // chalk rule
 const debugSuccess = chalk.green;
 const debugError = chalk.red;
 
-// success
-debugSuccess (info) => {
+// for success...
+debugSuccess => {
   if (process.env.DEBUG) {
-    (clc.green(console.log(info));
+    console.log(debugSuccess(info));
     fs.appendFile('./logs/log.log', '\n' +  info  + '\n', (debugSuccess) => {
     });
   };
 }
 
-// error
-debugError (info) => {
+// for error...
+debugError => {
   if (process.env.DEBUG) {
-    (clc.red(console.log(info));
+    console.log(debugError(info));
     fs.appendFile('./logs/log.log', '\n' +  info  + '\n', (debugError) => {
     });
   };
