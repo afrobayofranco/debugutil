@@ -38,7 +38,7 @@ DEBUG=false
 ```
 
 ## Unit Testing
-I have also included Unit Testing for this package. Unit Testing is provided using [chai](https://www.npmjs.com/package/chai), [supertest]https://www.npmjs.com/package/supertest() and [mocha](https://www.npmjs.com/package/mocha).
+I have also included Unit Testing for this package. Unit Testing is provided using [chai](https://www.npmjs.com/package/chai), [supertest](https://www.npmjs.com/package/supertest) and [mocha](https://www.npmjs.com/package/mocha).
 
 ## Code Coverage
 Check out [istanbul](https://www.npmjs.com/package/istanbul) for more on code coverage.
