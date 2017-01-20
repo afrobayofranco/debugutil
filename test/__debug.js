@@ -1,27 +1,12 @@
 // Debug Utility Tool with Logging by Melony Smith
+const expect = require('chai').expect;
 
-const request = require('supertest');
-const expect = require('chai');
-
-const debug= require('../src/debug.js');
+const debug = require('../src/debug.js');
 
 describe ('debugutil', () => {
-  const logArray = [
-    {
-      testName: 'should log success',
-      functionName: debug.debugSuccess,
-      functionType: 'debug.debugSuccess',
-    },
-    {
-      testName: 'should log error',
-      functionName: debug.debugError,
-      functionType: 'debug.debugError',
-    },
-  ]
-    for (let i = 0; i < logArray.length; i++) {
-      it (logArray[i].testName, (done) => {
-          logArray[i].functionName('This is a '+ logArray[i].functionType + ' test');
-     done();
-    });
-  };
+
+  it('test that success works');
+  it('test that error works');
+  it('test that warn works');
+
 });
