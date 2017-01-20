@@ -1,7 +1,7 @@
 // Debug Utility with Logging by Melony Smith
 
 // dependencies
-const timestamp = require('log-timestamp');
+require('log-timestamp');
 const chalk = require('chalk');
 const fs = require('fs');
 
@@ -17,7 +17,7 @@ exports.debug = (title, type) => {
         console.log(debugSuccess(title))
     } else if (type == 'error'){
         console.error(debugError(title))
-    } else if (type == 'warn'){
+    } else {
         console.warn(debugWarn(title))
     }
 
