@@ -13,12 +13,12 @@ const debugWarn = chalk.yellow;
 // for success...
 exports.debug = (title, type) => {
   if (process.env.DEBUG) {
-    if(type == 'success'){
-        console.log(debugSuccess(title))
+    if(type == 'warn'){
+        console.warn(debugWarn(title))
     } else if (type == 'error'){
         console.error(debugError(title))
     } else {
-        console.warn(debugWarn(title))
+        console.log(debugSuccess(title))
     }
 
   };
