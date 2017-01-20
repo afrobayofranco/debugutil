@@ -8,25 +8,18 @@ const fs = require('fs');
 // chalk rule
 const debugSuccess = chalk.green;
 const debugError = chalk.red;
+const debugWarn = chalk.yellow;
 
 // for success...
-debugSuccess => {
+exports.debug = (title, type) => {
   if (process.env.DEBUG) {
-    console.log(debugSuccess(info));
-    fs.appendFile('./logs/log.log', '\n' +  info  + '\n', (debugSuccess) => {
-    });
+    if(type == 'success'){
+        console.log(debugSuccess(title))
+    } else if (type == 'error'){
+        console.error(debugError(title))
+    } else if (type == 'warn'){
+        console.warn(debugWarn(title))
+    }
+
   };
 }
-
-// for error...
-debugError => {
-  if (process.env.DEBUG) {
-    console.log(debugError(info));
-    fs.appendFile('./logs/log.log', '\n' +  info  + '\n', (debugError) => {
-    });
-  };
-}
-
-// export
-exports.debugSuccess = debugSuccess;
-exports.debugError = debugError;
