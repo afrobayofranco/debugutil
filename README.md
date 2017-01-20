@@ -22,8 +22,7 @@ npm install
 
 ## Debugging
 You will need to require the debugutil package in each file you wish it to run. You can do this by adding the following to the top of each file:
-```
-javascript
+```javascript
 require('utildebug');
 ```
 
@@ -32,7 +31,7 @@ To enable logging, use the following environmental variable:
 DEBUG=true
 ```
 
-You will now receive green success and red error messages in your CLI as well as have them logged to the .log file.
+You will now receive green success, yellow warn and red error messages in your CLI as well as have them logged to the .log file located in the logs folder.
 
 To disable logging, use the following environmental variable:
 ```javascript
@@ -59,7 +58,7 @@ istanbul cover src/debug.js
 You can change the name and/or path of the folder and the .log file, in src/debug.js. Just edit the following lines:
 ```javascript
 fs.appendFile('./logs/logFile.log', function () {
-  console.log('Data was appended to file!');
+  console.log('Data was successfully appended to file!');
 });
 ```    
 
