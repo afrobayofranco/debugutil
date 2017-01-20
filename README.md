@@ -58,13 +58,9 @@ istanbul cover src/debug.js
 ## Other
 You can change the name and/or path of the folder and the .log file, in src/debug.js. Just edit the following lines:
 ```javascript
-fs.appendFile('./logs/logFile.log', '\n' +  info  + '\n', (debugSuccess) => {
+fs.appendFile('./logs/logFile.log', function () {
+  console.log('Data was appended to file!');
 });
-```
-and
-```javascript
-fs.appendFile('./logs/logFile.log', '\n' +  info  + '\n', (debugError) => {
-    });
 ```    
 
 You can change the display color of messages in src/debug.js via [chalk](https://www.npmjs.com/package/chalk) by editing the following:
