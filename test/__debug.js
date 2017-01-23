@@ -3,7 +3,6 @@
 // dependencies
 const expect = require('chai').expect;
 const chalk = require('chalk');
-const fs = require('fs');
 
 // chalk rule
 const success = chalk.green;
@@ -20,8 +19,4 @@ describe ('debugutil', () => {
   it('test for warn has run', () => {
     console.warn(warn('Test Successful: Warn Works!'));
   });
-});
-
-fs.appendFile('./logs/logFile.log', function () {
-  console.log('Data was appended to file!');
 });
