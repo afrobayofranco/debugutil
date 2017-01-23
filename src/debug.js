@@ -1,18 +1,21 @@
-// Debug Utility with Logging by Melony Smith
+// Debug Utility Tool with Logging by Melony Smith
 
 // dependencies
-require('log-timestamp');
-const fs = require('fs');
+const chalk = require('chalk');
 
-// for success...
+// chalk rule
+const success = chalk.green;
+const error = chalk.red;
+const warn = chalk.yellow;
+
 exports.debug = (title, type) => {
   if (process.env.DEBUG) {
-    if(type == 'warn'){
+    if (type == 'warn') {
         console.warn(warn(title, type))
-    } else if (type == 'error'){
+    } else if (type == 'error') {
         console.error(error(title, type))
     } else {
         console.log(success(title, type))
-    }
-  };
+    };
+  }
 }
