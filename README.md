@@ -1,10 +1,8 @@
 ## debugutil
-A [NodeJS](https://nodejs.org/en/) API debug utility tool with logging developed for my Deployment of Web Applications class at Full Sail University. This package will allow you to debug your API with success, warn and error messages displayed in your CLI (Command Line Interface) as well as saving timestamped messages to a .log file.
-
-Note: Logging is not working. I will have this fixed soon.
+A [NodeJS](https://nodejs.org/en/) API debug utility tool with logging developed for my Deployment of Web Applications class at Full Sail University. This package will allow you to debug your API with success, warn and error messages displayed in your CLI (Command Line Interface).
 
 ## Required
-This Debug Utility Tool will run on an API created with [NodeJS](https://nodejs.org/en/)
+This Debug Utility Tool will run on an API created with [NodeJS](https://nodejs.org/en/).
 
 ## Installation
 In your CLI, ensure that you are in the directory containing your [NodeJS](https://nodejs.org/en/) API.
@@ -23,7 +21,7 @@ npm install
 ## Debugging
 You will need to require the debugutil package in each file you wish it to run. You can do this by adding the following to the top of each file:
 ```javascript
-require('utildebug');
+const debugutil = require('debugutil');
 ```
 
 To enable logging, use the following environmental variable:
@@ -31,7 +29,7 @@ To enable logging, use the following environmental variable:
 DEBUG=true
 ```
 
-You will now receive green success, yellow warn and red error messages in your CLI as well as have them logged to the .log file located in the logs folder.
+You will now receive green success, yellow warn and red error messages in your CLI.
 
 To disable logging, use the following environmental variable:
 ```javascript
@@ -54,14 +52,7 @@ To run tests with code coverage, execute the following command in your CLI:
 istanbul cover src/debug.js
 ```
 
-## Other
-You can change the name and/or path of the folder and the .log file, in src/debug.js. Just edit the following lines:
-```javascript
-fs.appendFile('./logs/logFile.log', function () {
-  console.log('Data was successfully appended to file!');
-});
-```    
-
+## Other  
 You can change the display color of messages in src/debug.js via [chalk](https://www.npmjs.com/package/chalk) by editing the following:
 ```javascript
 const success = chalk.green;

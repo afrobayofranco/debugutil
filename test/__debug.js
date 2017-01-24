@@ -5,6 +5,8 @@ const expect = require('chai').expect;
 const debug = require('../src/debug.js');
 require('mocha-sinon');
 
+const chalk = require('chalk');
+
 process.env.DEBUG= true;
 
 describe ('debugutil', (done) => {
