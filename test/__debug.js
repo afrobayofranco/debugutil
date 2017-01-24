@@ -1,22 +1,34 @@
 // Debug Utility Tool with Logging by Melony Smith
 
-// dependencies
+// Dependencies
 const expect = require('chai').expect;
+const debug = require('../src/debug.js');
+require('mocha-sinon');
+
 const chalk = require('chalk');
 
-// chalk rule
-const success = chalk.green;
-const error = chalk.red;
-const warn = chalk.yellow;
+process.env.DEBUG= true;
 
-describe ('debugutil', () => {
-  it('test for success has run', () => {
-    console.log(success('Test Successful: Success Works!'));
+describe ('debugutil', (done) => {
+  beforeEach(function() {
+    this.sinon.stub(console, 'log');
+    this.sinon.stub(console, 'error');
+    this.sinon.stub(console, 'warn');
   });
-  it('test for error has run', () => {
-    console.error(error('Test Successful: Error Works!'));
+
+  it('test for success has run', (done) => {
+    debug.debug('Success Message', 'success');
+    expect(console.log.calledOnce).to.be.true;
+    done();
   });
-  it('test for warn has run', () => {
-    console.warn(warn('Test Successful: Warn Works!'));
+  it('test for error has run', (done) => {
+    debug.debug('Error Message', 'error')
+    expect(console.error.calledOnce).to.be.true;
+    done();
+  });
+  it('test for warn has run', (done) => {
+    debug.debug('Warning Message', 'warn')
+    expect(console.warn.calledOnce).to.be.true;
+    done();
   });
 });

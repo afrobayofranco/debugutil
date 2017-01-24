@@ -1,21 +1,31 @@
 // Debug Utility Tool with Logging by Melony Smith
 
 // dependencies
+require('log-timestamp');
 const chalk = require('chalk');
+const fs = require('fs');
 
-// chalk rule
-const success = chalk.green;
-const error = chalk.red;
-const warn = chalk.yellow;
+// define console colors by type
+let warn = chalk.yellow;
+let error = chalk.red;
+let success = chalk.green;
 
+// debug
 exports.debug = (title, type) => {
-  if (process.env.DEBUG) {
-    if (type == 'warn') {
-        console.warn(warn(title, type))
-    } else if (type == 'error') {
-        console.error(error(title, type))
+  // if DEBUG is equal to true...
+  if (process.env.DEBUG = 'true') {
+    // if type of message is equal to warn...
+    if(type == 'warn'){
+       //...console in yellow      
+       console.warn(warn(title))
+    // if type of message is equal to error...  
+    } else if (type == 'error'){
+        // ...console in red
+        console.error(error(title))
+    // if type of message is not equal to warn or error...  
     } else {
-        console.log(success(title, type))
-    };
-  }
+        // ...console all other messages in gree
+        console.log(success(title))
+    }
+  };
 }

@@ -1,0 +1,7 @@
+function () {
+  console.log('Data was appended to file!');
+}function () {
+  console.log('Data was appended to file!');
+}function () {
+  console.log('Data was appended to file!');
+}
